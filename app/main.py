@@ -23,3 +23,7 @@ def sqr(a: int):
 @app.get("/multiply/{a}/{b}")
 def multiply(a: int, b: int):
     return {"multiply": a * b}
+
+@app.get("/subtract/{a}/{b}")
+def subtract(a: int, b: int):
+    return {"difference": a - b}
