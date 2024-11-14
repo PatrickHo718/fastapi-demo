@@ -8,10 +8,10 @@ from typing import Optional
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 
-DBHOST = os.getenv('DBHOST')
-DBUSER = os.getenv('DBUSER')
+DBHOST = "ds2022.cqee4iwdcaph.us-east-1.rds.amazonaws.com"
+DBUSER = "admin"
 DBPASS = os.getenv('DBPASS')
-DB = os.getenv('DB')
+DB = "bqu3tr"
 
 db = mysql.connector.connect(user=DBUSER, host=DBHOST, password=DBPASS, database=DB)
 cur=db.cursor()
