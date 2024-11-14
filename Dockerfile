@@ -5,4 +5,4 @@ RUN apk add musl-dev mariadb-connector-c-dev gcc
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 COPY ./app /code/app
 EXPOSE 80
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80", "--workers", "4"]
+CMD ["fastapi", "run", "app/main.py", "--port", "80", "--workers", "4"]
